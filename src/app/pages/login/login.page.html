@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="colors">
+    <ion-title></ion-title>
+    <ion-img src="assets/icon/logo.png"></ion-img>
+    <ion-text class="ion-text-center" color="medium">
+      <h6>Aplicación para escanear codigos QR.</h6>
+    </ion-text>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="ion-margin">
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input [(ngModel)]="mdl_usuario"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin">
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="mdl_contrasena"></ion-input>
+  </ion-item>
+  
+
+  <ion-button expand="block" class="ion-margin colors" (click)="login()">
+    <ion-icon name="rocket-outline"></ion-icon> Ingresar
+  </ion-button>
+
+  <ion-button expand="block" class="ion-margin colors" (click)="presentarFormularioIngreso()">
+    <ion-icon name="people-outline"></ion-icon> Crear nuevo Usuario
+  </ion-button>
+
+  <ion-button expand="block" class="ion-margin colors" (click)="navegar()">
+    <ion-icon name="create-outline"></ion-icon>Modificar Contraseña
+  </ion-button>
+
+</ion-content>
+<footer class="ion-text-center">Blue-Sky © 2021</footer>

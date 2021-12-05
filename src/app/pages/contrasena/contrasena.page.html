@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="colors">
+    <ion-title>Cambio de Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="ion-margin">
+    <ion-label position="floating">Nombre de Usuario</ion-label>
+    <ion-input [(ngModel)]="mdl_usuario"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin">
+    <ion-label position="floating">Contraseña Actual</ion-label>
+    <ion-input type="password"[(ngModel)]="mdl_contrasenaActual"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin">
+    <ion-label position="floating">Contraseña Nueva</ion-label>
+    <ion-input type="password" [(ngModel)]="mdl_contrasenaNueva"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin colors" (click)="modificarContrasena()">
+    Cambiar Contraseña
+  </ion-button>
+
+</ion-content>

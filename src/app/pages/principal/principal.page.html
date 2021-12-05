@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-title></ion-title>
+  <ion-toolbar class="colors">
+    <h1> <ion-icon name="rocket-outline"></ion-icon> Blue-Sky</h1>
+    <ion-buttons slot="end">
+      <ion-button  (click)="cerrarSesion()">Cerrar Sesión</ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center"  class="ion-padding">
+  <center><ion-label class="ion-text-center" > {{ nombreUsuario }} </ion-label>
+  <h3>¿Que haras hoy?</h3></center>
+  <h1></h1>
+
+<ion-button class="colors" expand="block" (click)="sacarFoto()"><ion-icon name="camera-outline"></ion-icon>Sacar Foto</ion-button>
+<ion-img [src]= "ruta" style= "width: 100% ;height: 70%;"></ion-img>
+
+
+
+<ion-button class="colors" expand="block" (click)="escanerQR()"><ion-icon name="search-outline"></ion-icon>Escanear QR</ion-button>
+<ion-label>{{ texto }}</ion-label>
+
+
+</ion-content>
