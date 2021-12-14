@@ -6,18 +6,18 @@
       <ion-button  (click)="cerrarSesion()">Cerrar Sesión</ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <h4 class="ion-text-center"> {{ nombreUsuario }}</h4>
+  <h4 class="nameUsuario"> {{ nombreUsuario }}</h4>
   <center>
     <ion-button class="datetime ion-text-center">
-      Hoy es
-      <ion-datetime [(ngModel)]="date" display-format="DD/ MMM / YYYY  hh:mm" min="date"></ion-datetime>
+      <ion-icon name="calendar-outline"></ion-icon> &nbsp; Hoy es: &nbsp;
+      <ion-datetime [(ngModel)]="date" display-format="DD/ MMM / YYYY  HH:mm" min="date"></ion-datetime>
     </ion-button>
   </center>
 </ion-header>
 
 <ion-content class="ion-text-center"  class="ion-padding">
 
-  <h3 class="ion-text-center">¿Que haras hoy?</h3>
+  <h3 class="ion-text-center">¿Que harás hoy?</h3>
 
 <ion-button class="colors" expand="block" (click)="sacarFoto()"><ion-icon name="camera-outline"></ion-icon>Sacar Foto</ion-button>
   <ion-img [src]= "ruta" style= "width: 100% ;height: 70%;"></ion-img>
@@ -25,6 +25,6 @@
 
 
 <ion-button class="colors" expand="block" (click)="escanerQR()"><ion-icon name="search-outline"></ion-icon>Escanear QR</ion-button>
-  <a>{{ texto }}</a>
+  <a href="{{texto}}">{{ texto }}</a>
 
 </ion-content>
