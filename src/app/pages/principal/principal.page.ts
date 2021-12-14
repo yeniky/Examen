@@ -58,6 +58,7 @@ public date: string = new Date().toISOString();
     this.qr.scan().then(data => 
     {
       this.texto = data ['text'];
+      window.location.href=  data ['text'];
     })
   }
 }
