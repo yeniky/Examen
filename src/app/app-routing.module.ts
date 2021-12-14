@@ -21,6 +21,17 @@ const routes: Routes = [
     path: 'contrasena',
     loadChildren: () => import('./pages/contrasena/contrasena.module').then(m => m.ContrasenaPageModule)
   },
+  {
+    path: 'e404',
+    loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
+  },
+
+  {
+    path: '**',
+    redirectTo: 'e404',
+    pathMatch: 'full'
+  },
+
 ];
 
 @NgModule({

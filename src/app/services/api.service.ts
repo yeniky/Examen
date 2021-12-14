@@ -21,4 +21,6 @@ export class ApiService {
   modificarContrasena(usuario, contrasena) {
     return this.http.put(this.rutaBase, { nombreFuncion: "UsuarioModificarContrasena", parametros: { usuario: usuario, contrasena: contrasena } });
   }
+
+
 }
