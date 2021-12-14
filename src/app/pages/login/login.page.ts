@@ -56,7 +56,8 @@ export class LoginPage implements OnInit {
         }, {
           text: 'Almacenar',
           handler: (data) => {
-            this.crearUsuario(data.txt_usuario, data.txt_contrasena);
+            this.api.crearUsuario(data.txt_usuario, data.txt_contrasena).subscribe(data => {
+              console.log(data)});
 
 
           }
@@ -83,7 +84,7 @@ export class LoginPage implements OnInit {
 
   login() {
     this.api.login(this.mdl_usuario, this.mdl_contrasena).subscribe(data => {
-      if (data['result'] === 'Login invalido') {
+      if (data['result'] === 'LOGIN NOK') {
         this.db.eliminarUsuario();
         this.mostrarRespuesta("Credenciales incorrectas");
       } else {
