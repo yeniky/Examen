@@ -10,6 +10,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
 })
+
+
 export class PrincipalPage implements OnInit {
 
   nombreUsuario: string = '';
@@ -43,6 +45,8 @@ export class PrincipalPage implements OnInit {
     });
     this.ruta = image.webPath;
   }
+
+public date: string = new Date().toISOString();
 
   cerrarSesion() {
     this.db.eliminarUsuario();
